@@ -1,3 +1,29 @@
 <div>
 
+    {{!-- handlebars statements are in two curly brackets {{ }} --}}
+<h1>Welcome {{ name }} 👋</h1>
+{{!-- it's also possible to remove the this --}}
+{{!-- <h1>Welcome {{ name }} 👋</h1> --}}
+
+<div>
+    <img src="/images/beer.png" alt="Beer glas" >
+</div>
+
+<div class="btns">
+    <a href="/beers.hbs" class="btn btn-primary">Check all Beers!</a>
+    <a href="/random-beers.hbs" class="btn btn-primary">Check a Random Beers!</a>
+</div>
+
+{{#if list}}
+<h2>This is your Todo List</h2>
+<ul>
+    {{#each list}}
+        {{!-- <this> is one of the elements in the array that we are iterating over --}}
+        <li>{{this}}</li>
+    {{/each}}
+</ul>
+{{else}}
+{{!-- <h2>No Beer yet 🙃</h2> --}}
+{{/if}}
+
 </div>
